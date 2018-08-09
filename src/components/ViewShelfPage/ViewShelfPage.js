@@ -29,7 +29,7 @@ class ViewShelfPage extends Component {
 
   render() {
     const displayItems = this.props.item.map((item, index) => {
-      return (<p key={index}>{item.description}<img src={item.image_url}height='200px'width='auto'/></p>)
+      return (<p key={index}>{item.description}<img alt="shelf item" src={item.image_url}height='200px'width='auto'/></p>)
     })
     console.log(this.props.item)
     let content = null;
