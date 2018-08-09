@@ -11,7 +11,11 @@ import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
+
 import AddItem from './components/AddItem/AddItem'
+
+import ViewShelfPage from './components/ViewShelfPage/ViewShelfPage';
+
 
 import './styles/main.css';
 
@@ -40,6 +44,10 @@ const App = () => (
         <Route
           path="/add"
           component={AddItem}
+          />
+        <Route
+          path="/view"
+          component={ViewShelfPage}
         />
       </Switch>
     </Router>
