@@ -34,6 +34,8 @@ class LoginPage extends Component {
     if (this.state.username === '' || this.state.password === '') {
       this.props.dispatch(formError());
     } else {
+      console.log('got to trigger login');
+      
       this.props.dispatch(triggerLogin(this.state.username, this.state.password));
     }
   }
