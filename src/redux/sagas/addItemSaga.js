@@ -6,9 +6,7 @@ import {ITEM_ACTION} from '../actions/addItemActions';
 
 
 
-function* addItemSaga() {
-    console.log(ITEM_ACTION.ADD_ITEM);
-    
+function* addItemSaga() {    
     try {
         yield takeEvery(ITEM_ACTION.ADD_ITEM, addItem)
     } catch (error) {

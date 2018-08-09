@@ -2,9 +2,7 @@ import { SHELF_ACTIONS } from '../actions/shelfActions';
 import { put, takeLatest } from 'redux-saga/effects';
 import { callItems } from '../requests/shelfRequests';
 
-function* viewShelfSaga() {
-    console.log('shelfsaga');
-    
+function* viewShelfSaga() {    
     yield takeLatest(SHELF_ACTIONS.FETCH_ITEMS, fetchItems);
   }
 
