@@ -16,6 +16,8 @@ class UserPage extends Component {
   }
 
   componentDidUpdate() {
+    console.log(this.props.user);
+    
     if (!this.props.user.isLoading && this.props.user.userName === null) {
       this.props.history.push('home');
     }

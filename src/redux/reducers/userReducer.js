@@ -4,6 +4,8 @@ import { USER_ACTIONS } from '../actions/userActions';
 const userName = (state = null, action) => {
   switch (action.type) {
     case USER_ACTIONS.SET_USER:
+      console.log(action.user);
+      
       return action.user.username || state;
     case USER_ACTIONS.UNSET_USER:
       return null;
@@ -11,6 +13,13 @@ const userName = (state = null, action) => {
       return state;
   }
 };
+
+
+// const userObject = (state = null, action) => {
+//   switch(action.type){
+    
+//   }
+// }
 
 const isLoading = (state = false, action) => {
   switch (action.type) {
