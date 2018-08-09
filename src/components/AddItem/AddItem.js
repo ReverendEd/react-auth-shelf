@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUser } from '../../redux/actions/userActions';
-
+import Nav from '../Nav/Nav';
 
 import { triggerAddItem } from '../../redux/actions/addItemActions';
 
@@ -53,6 +53,7 @@ class AddItem extends Component {
     render() {
         return (
             <div>
+                <Nav />
                 <form onSubmit={ this.handleSubmit}>
                     <input type="text" value={this.state.description} placeholder="description" onChange={ this.handleChangeFor('description')} />
                     <input type="text" value={this.state.img_url} placeholder="image url" onChange={this.handleChangeFor('img_url')} />

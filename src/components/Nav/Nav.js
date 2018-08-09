@@ -16,10 +16,11 @@ const Nav = () => (
           </Link>
         </li>
         <li>
-
           <Link to="/add">
-          add item
+          Add Item
         </Link>
+        </li>
+        <li>
           <Link to="/view">
             View Shelf
           </Link>
