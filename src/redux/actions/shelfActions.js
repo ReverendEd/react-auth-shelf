@@ -7,8 +7,3 @@ export const SHELF_ACTIONS = {
 export function fetchItems() {
     return { type: SHELF_ACTIONS.FETCH_ITEMS }
 };
-
-
-export function setItems()
-
-export function displayItems()

@@ -3,14 +3,17 @@ import { connect } from 'react-redux';
 import Nav from '../../components/Nav/Nav';
 import { fetchUser } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
+import { fetchItems } from '../../redux/actions/shelfActions';
 
 const mapStateToProps = state => ({
   user: state.user,
+  item: state.items.itemName
 });
 
 class ViewShelfPage extends Component {
   componentDidMount() {
     this.props.dispatch(fetchUser());
+    this.props.dispatch(fetchItems());
   }
 
   componentDidUpdate() {
@@ -25,6 +28,10 @@ class ViewShelfPage extends Component {
   }
 
   render() {
+    const displayItems = this.props.item.map((item, index) => {
+      return (<p key={index}>{item.description}</p>)
+    })
+    console.log(this.props.item)
     let content = null;
 
     if (this.props.user.userName) {
@@ -32,8 +39,7 @@ class ViewShelfPage extends Component {
         <div>
           <h1>SHELF</h1>
           <ul>
-            <li>
-            </li>
+            {displayItems}
           </ul>
         </div>
       );
