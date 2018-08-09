@@ -16,7 +16,7 @@ const Nav = () => (
           </Link>
         </li>
         <li>
-          <Link to="/shelf">
+          <Link to="/view">
             View Shelf
           </Link>
         </li>

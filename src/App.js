@@ -38,7 +38,7 @@ const App = () => (
           component={InfoPage}
         />
         <Route
-          path="/shelf"
+          path="/view"
           component={ViewShelfPage}
         />
       </Switch>
