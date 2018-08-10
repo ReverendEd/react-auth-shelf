@@ -25,6 +25,11 @@ const Nav = () => (
             View Shelf
           </Link>
         </li>
+        <li>
+          <Link to="/stats">
+            Stats
+          </Link>
+        </li>
       </ul>
     </div>
   </div>

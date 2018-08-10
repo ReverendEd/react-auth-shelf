@@ -3,6 +3,7 @@ import userSaga from './userSaga';
 import loginSaga from './loginSaga';
 import viewShelfSaga from './viewShelfSaga';
 import addItemSaga from './addItemSaga';
+import fetchCountSaga from './countItemSaga';
 
 
 export default function* rootSaga() {
@@ -10,7 +11,8 @@ export default function* rootSaga() {
     userSaga(),
     loginSaga(),
     viewShelfSaga(),
-    addItemSaga()
+    addItemSaga(),
+    fetchCountSaga()
     // watchIncrementAsync()
   ]);
 }

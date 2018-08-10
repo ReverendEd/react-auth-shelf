@@ -11,6 +11,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
+import Stats from './components/Stats/Stats';
 
 import AddItem from './components/AddItem/AddItem'
 
@@ -48,6 +49,10 @@ const App = () => (
         <Route
           path="/view"
           component={ViewShelfPage}
+        />
+        <Route
+          path="/stats"
+          component={Stats}
         />
       </Switch>
     </Router>

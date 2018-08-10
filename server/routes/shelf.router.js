@@ -21,6 +21,22 @@ router.get('/', (req, res) => {
     }
 });
 
+router.get('/stats', (req, res) => {
+    console.log(req.user)
+    if (req.isAuthenticated()) {
+        console.log('Got to Stats route')
+       pool.query(`SELECT "person"."username", count("person"."id")  FROM "item"
+        JOIN "person" ON "person"."id" = "item"."person_id"
+        GROUP BY "person"."username";`).then((result) => {
+            res.send(result.rows);
+        }).catch((error) => {
+            console.log('Error: ', error);
+            res.sendStatus(500);
+        });
+    } else {
+        res.sendStatus(403);
+    }
+})
 
 /**
  * Add an item for the logged in user to the shelf
